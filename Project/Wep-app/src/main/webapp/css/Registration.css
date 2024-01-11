@@ -1,0 +1,169 @@
+/* Reset some default styles */
+body, figure, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../office.jpg') center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Apply some basic styling to the form container */
+.main {
+    width: 80%; /* Set your desired width */
+    max-width: 600px; /* Set your desired maximum width */
+    background-color: rgba(255, 255, 255, 0.7);  /* Added a slight background color with transparency */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto; /* Center the container horizontally and add margin-top */
+}
+
+.sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signup-image {
+    position: absolute;
+    top: 60px;
+    right: 880px;
+    width: 6%; /* Adjust the width as needed */
+}
+
+.signup-image img {
+    width: 100%;
+    height: auto;
+}
+
+.signup-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto; /* Add this line to center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center contents horizontally */
+    align-items: center;
+}
+
+.form-title {
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    position:relative;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 13px;
+    color: #333;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #6c7ae0;
+}
+
+
+.form-button {
+    text-align: center;
+}
+
+.form-submit {
+    background-color: #6c7ae0;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-submit:hover {
+    background-color: #475993;
+}
+
+
+.form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    flex-direction: row; /* Change the direction to place checkbox on the right */
+}
+
+.form-group.checkbox-group label {
+    font-size: 13px;
+    color: #333;
+    margin-right: 0px; /* Adjust the margin to control the spacing between the label and the checkbox */
+}
+
+.form-group.checkbox-group input {
+    margin-left: 5px; /* Adjust the margin to control the spacing between the checkbox and the label */
+}
+
+@media (max-width: 768px) {
+    .signup-content {
+        flex-direction: column;
+    }
+
+    .signup-form {
+        order: 1;
+        margin-top: 20px; /* Move the margin styling here if needed */
+    }
+}
+
+/* Add styles for the tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

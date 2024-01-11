@@ -1,0 +1,29 @@
+In the dynamic landscape of academic conferences, efficient organization and seamless coordination are paramount. The Conference Management System (CMS) emerges as a sophisticated platform designed to revolutionize the way conferences are managed, offering a comprehensive suite of features that cater to organizers, authors, and participants alike.
+
+User Management:
+
+CMS provides distinct user roles to ensure a tailored experience for each participant. Visitors can explore conference and paper details, while authenticated users take on roles such as AUTHORS, PC CHAIRS, or PC MEMBERS. Admins wield overarching control, managing user accounts and accessing all system functionalities.
+
+Paper Management:
+
+Authors experience a streamlined paper management process. From paper creation with unique titles to updates and co-author additions, CMS ensures a smooth workflow. Formal paper submission, reviewer assignments, and the review process follow stringent criteria, enhancing the quality and efficiency of academic content. Authors receive comprehensive tools for final submissions and witness the acceptance or rejection of their work.
+
+Conference Management:
+
+CMS empowers conference organizers with tools for effective planning and execution. From the creation of conferences to subsequent updates, addition of PC Chairs and Members, and comprehensive search functionalities, the system facilitates every step. State transitions, including submission, assignment, review, decision-making, final submission, and conclusion, are orchestrated seamlessly, allowing organizers to maintain control at each stage.
+
+User Management:
+
+User-centric functionalities encompass user registration, information updates, password changes, and account status management. The system prioritizes security, implementing robust password policies and token-based authentication. Admins can efficiently manage user accounts, ensuring a secure and user-friendly environment.
+
+Entities:
+
+CMS revolves around three core entities: Paper, Conference, and User. Each entity is meticulously designed, featuring essential attributes and states that capture the intricate details of the conference management process.
+
+Assumptions/Constraints:
+
+The system operates on the assumption that token cancellation can lead to token deletion, and the permanent role of a user remains stable. Admin users, crucial for system security, cannot be deleted. User account deactivation is contingent on consecutive failures for the same user management function, emphasizing security and consecutive failures.
+
+Conclusion:
+
+In conclusion, the Conference Management System emerges as a pivotal solution for academia, addressing the intricate challenges of conference organization and paper management. By integrating advanced functionalities, ensuring user-friendly interfaces, and upholding stringent security measures, CMS stands as a beacon in the realm of academic conference management, fostering efficiency, collaboration, and innovation.

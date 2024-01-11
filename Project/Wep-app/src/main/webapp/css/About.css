@@ -1,0 +1,54 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../office.jpg') center center fixed;
+    background-size: cover;;
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.main-container {
+    width: 90%; /* Set your desired width */
+    max-width: 800px; /* Set your desired maximum width */
+    margin: 50px auto; /* Center the container horizontally and add margin-top */
+}
+
+.main {
+    background-color: rgba(255, 255, 255, 0.7);  /* Added a slight background color with transparency */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    padding: 20px; /* Add padding to create space between text and container edges */
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Add your specific styles for the Terms & Conditions content */
+/* For example, you might want to style links, headings, etc. */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+}

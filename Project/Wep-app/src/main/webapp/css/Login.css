@@ -1,0 +1,192 @@
+/* Reset some default styles */
+body, figure, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('../office.jpg') center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* Apply some basic styling to the form container */
+.main {
+    width: 80%; /* Set your desired width */
+    max-width: 600px; /* Set your desired maximum width */
+    background-color: rgba(255, 255, 255, 0.7);  /* Added a slight background color with transparency */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+     padding: 120px 30px; /* Center the container horizontally and add margin-top */
+}
+
+.sign-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signup-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30%; /* Adjust the width as needed */
+}
+
+.signup-image img {
+    width: 100%;
+    height: auto;
+}
+
+.signup-form {
+    width: 80%; /* Set your desired width */
+    max-width: 400px; /* Set your desired maximum width */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center contents vertically */
+    align-items: center;
+}
+
+.form-title {
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 30px;
+    text-align: center; /* Center the form title */
+}
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 13px;
+    color: #333;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.form-group input {
+    width: 40%; /* Adjust the width as needed */
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    margin: 0 auto; /* Center the input horizontally within the form-group */
+    display: block; /* Ensure it takes up the full width available */
+}
+
+.form-group input:focus {
+    border-color: #6c7ae0;
+}
+
+.form-button {
+    text-align: center;
+}
+
+.form-submit {
+    background-color: #6c7ae0;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-submit:hover {
+    background-color: #475993;
+}
+
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.socials {
+    list-style: none;
+    padding: 0;
+}
+
+.socials li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socials i {
+    font-size: 30px;
+    color: #6c7ae0;
+    cursor: pointer;
+}
+
+
+.form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group.checkbox-group label {
+    font-size: 13px;
+    color: #333;
+    margin-left: 180px; /* Adjust the margin or use margin-right to control the spacing */
+}
+
+.form-group.checkbox-group input {
+    margin-right: 0 px; /* Adjust the margin to control the spacing between the checkbox and the label */
+}
+
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sign-up {
+        flex-direction: column;
+    }
+
+    .signup-form {
+        order: 1;
+        margin-top: 20px; /* Move the margin styling here if needed */
+    }
+
+    .visitor-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .visitor-button button {
+        background-color: #6c7ae0;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .visitor-button button:hover {
+        background-color: #475993;
+    }
+}

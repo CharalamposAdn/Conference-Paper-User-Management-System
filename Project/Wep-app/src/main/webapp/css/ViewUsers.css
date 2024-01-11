@@ -1,0 +1,236 @@
+/* ViewUsers.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../office.jpg);
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+    min-height: 100px;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 30px;
+    margin-right: 60px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+ul li.active a {
+    background-color: #fff;
+    color: #000;
+}
+
+.logo img {
+    float: left;
+    width: 200px;
+    height: auto;
+}
+
+.main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    color: #fff;
+    font-size: 20px;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    border: 1px solid #fff;
+    padding: 5px 20px;
+    color: #fff;
+    transition: 0.6s ease;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the parent */
+    left: 0;
+    background-color:transparent;
+    padding: 10px 0;
+    z-index: 1; /* Ensure it's above other content */
+}
+
+ul li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu ul li {
+    width: 100%; /* Full width */
+    padding: 5px;
+    border-bottom: 1px #fff;
+    background: transparent;
+    transition: 0.4s ease;
+    text-align: left;
+}
+
+.sub-menu ul li:last-child {
+    border-bottom: none;
+}
+
+/* Popup-menu styles */
+.popup-menu {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.popup-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.popup-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.popup-content a:hover {
+    background-color: #ddd;
+}
+
+.popup-menu:hover .popup-content {
+    display: block;
+}
+
+
+.table-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%; /* Adjusted width to fill the container */
+    border-collapse: collapse;
+    
+}
+
+th, td {
+    padding: 8px; /* Slightly reduced padding */
+    border: 5px solid #ccc;
+    text-align: left;
+    /* Remove background color for th and td to make it see-through */
+    color: white;
+    max-height: 20px; /* Adjusted max-height for each row */
+    
+}
+
+th {
+    background-color: #ccc; /* Keep a background color for th if needed */
+}
+
+
+
+
+.activate-btn {
+    background-color: #4CAF50; /* Green */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.deactivate-btn {
+    background-color: #FF0000; /* Red */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.activate-btn:hover {
+    background-color: #45a049; /* Darker Green on hover */
+}
+
+.deactivate-btn:hover {
+    background-color: #e74c3c; /* Darker Red on hover */
+}
+
+
+
+
+
