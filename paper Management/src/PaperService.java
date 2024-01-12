@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PaperService {
-    private List<Paper> papers;  // Assuming this is your data storage for papers
+    private List<Paper> papers;  // Assuming this is  data storage for papers
 
     public PaperService() {
         this.papers = new ArrayList<>();
@@ -42,7 +42,7 @@ public class PaperService {
         if (paper != null && paper.getState() == PaperState.CREATED) {
             paper.setState(PaperState.SUBMITTED);
         }
-        // Handle other cases
+        
     }
 
     public void assignReviewer(int paperId, User reviewer) {
@@ -50,7 +50,7 @@ public class PaperService {
         if (paper != null && paper.getState() == PaperState.SUBMITTED) {
             paper.getCoAuthors().add(reviewer);
         }
-        // Handle other cases
+        
     }
 
     public void reviewPaper(int paperId, Review review) {
@@ -58,7 +58,7 @@ public class PaperService {
         if (paper != null && paper.getState() == PaperState.SUBMITTED) {
             paper.getReviews().add(review);
         }
-        // Handle other cases
+        
     }
 
     public void makeDecision(int paperId, PaperState decision) {
@@ -66,7 +66,7 @@ public class PaperService {
         if (paper != null && paper.getState() == PaperState.REVIEWED) {
             paper.setState(decision);
         }
-        // Handle other cases
+        
     }
 
     public void finalSubmission(int paperId, String updatedContent) {
@@ -74,19 +74,14 @@ public class PaperService {
         if (paper != null && paper.getState() == PaperState.APPROVED) {
             paper.setContent(updatedContent);
         }
-        // Handle other cases
+        
     }
 
-    // Other necessary methods
-
     private Paper getPaperById(int paperId) {
-        // Implement logic to retrieve a paper by ID from your data storage
         return papers.stream().filter(p -> p.getId() == paperId).findFirst().orElse(null);
     }
 
     private int generateUniqueId() {
-        // Implement logic to generate a unique ID
-        // This can be a simple increment or a more sophisticated approach based on your needs
         return papers.size() + 1;
     }
 }
