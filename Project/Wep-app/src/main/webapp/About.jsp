@@ -6,7 +6,7 @@
 <title>About</title>
 <link rel="stylesheet" type="text/css" href="css/About.css">
 <style>
-    /* Additional inline styles can be added here if needed */
+    
 </style>
 </head>
 <body>

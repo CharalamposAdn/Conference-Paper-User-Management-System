@@ -6,6 +6,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Update User ID</title>
+    <!-- JavaScript functions for showing success and error popups -->
     <script>
         function showSuccessPopup(message) {
             alert(message);

@@ -6,6 +6,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Delete Account</title>
+    <!-- JavaScript functions for showing success and error popups -->
     <script>
         function showSuccessPopup(message) {
             alert(message);
@@ -21,12 +22,13 @@
 <body>
 
 <%
+	//Get the current password and username from the request and session
     String currentPassword = request.getParameter("password");
-    String username = (String)session.getAttribute("name"); // Assuming the session attribute for username is "name"
-    
+    String username = (String)session.getAttribute("name"); 
+ 	//Database connection information
     String connurl = "jdbc:mysql://localhost:3306/registration";
     Connection con = null;
-
+ 	// Establish a database connection
     try {
         Class.forName("com.mysql.jdbc.Driver");
         con = DriverManager.getConnection(connurl, "root", "123456789");
@@ -47,7 +49,7 @@
                     deleteStatement.setInt(1, id);
 
                     int rowsAffected = deleteStatement.executeUpdate();
-
+                 	// Check if the deletion was successful
                     if (rowsAffected > 0) {
                         out.println("<script>showSuccessPopup('Account deleted successfully');</script>");
                     } else {
@@ -59,9 +61,11 @@
             }
         }
     } catch (Exception e) {
+    	// Show an error popup and print the stack trace for debugging purposes
         out.println("<script>showErrorPopup('An error occurred. Please try again later.');</script>");
         e.printStackTrace(); // Log the exception for debugging purposes
     } finally {
+    	// Close the database connection in the finally block
         try {
             if (con != null) {
                 con.close();

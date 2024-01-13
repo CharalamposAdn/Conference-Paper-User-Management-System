@@ -6,7 +6,7 @@ import java.io.Serializable;
 public class User implements Serializable  {
 
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; // for serialization
     private int id;
     private String name;
     private String email;
@@ -14,6 +14,7 @@ public class User implements Serializable  {
     private String contact;
     private String status;
 
+ // Getter and setter methods for each field
     public String getName() {
         return name;
     }
