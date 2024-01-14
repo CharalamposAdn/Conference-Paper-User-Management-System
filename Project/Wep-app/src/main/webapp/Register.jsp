@@ -14,8 +14,9 @@
     <!-- Main css -->
     <link href="css/Registration.css" rel="stylesheet" type="text/css">
 
-    <!-- Add this script for custom tooltip -->
+    <!-- Script section for tooltip functions -->
     <script>
+ // Function to show password pattern tooltip
     function showPasswordPatternTooltip() {
         var tooltip = document.getElementById("passwordPatternTooltip");
         tooltip.style.visibility = "visible";
@@ -23,7 +24,7 @@
             tooltip.style.visibility = "hidden";
         }, 1000);
     }
-
+ // Function to show username pattern tooltip
     function showUsernamePatternTooltip() {
         var tooltip = document.getElementById("usernamePatternTooltip");
         tooltip.style.visibility = "visible";
@@ -46,14 +47,14 @@
 
                     <div class="signup-form">
                         <h2 class="form-title">Sign up</h2>
-
+						<!-- Registration form -->
                         <form method="" action="Registration1.jsp" class="register-form" id="register-form">
-
+							<!-- Input field for user id -->
                             <div class="form-group">
                                 <label for="id"><i class= "zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="id" id="id" placeholder="Your id" />
                             </div>
-
+							 <!-- Input field for user name with username pattern tooltip -->
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name" onfocus= "showUsernamePatternTooltip()"  />
@@ -61,12 +62,12 @@
       							  Username must start with a letter and have at least 5 characters, which can be alphanumeric or '_'.
  							   </div>
                             </div>
-
+							<!-- Input field for user email -->
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="email" id="email" placeholder="Your Email" />
                             </div>
-
+							 <!-- Input field for user password with password pattern tooltip -->
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="password" id="password" placeholder="Password" onfocus= "showPasswordPatternTooltip()" />
@@ -74,15 +75,16 @@
                                     Password must be at least 8 characters, including uppercase, lowercase, digit, and special character.
                                 </div>
                             </div>
-
+							<!-- Input field for repeating user password -->
                             <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
                                 <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
                             </div>
-
+							<!-- Input field for user contact number -->
                             <div class="form-group">
                                 <label for="contact"><i class="zmdi zmdi-lock-outline"></i></label>
                                 <input type="text" name="contact" id="contact" placeholder="Contact no" />
+                              <!-- Checkbox for terms of service -->
                             <div class="form-group checkbox-group">
 							    <div class="checkbox-container">
 							        <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
@@ -94,17 +96,18 @@
 
 							</div>
                            
-
+							 <!-- Form submission button -->
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
                             </div>
-
+							<!-- Link to login page for existing members -->
                             <div class="form-button a">
                                 <a href="login.jsp" class="signup-image-link">I am already a member</a>
                             </div>
 
                         </form>
                     </div>
+                    <!-- Image container for sign-up section -->
                     <div class="signup-image">
                         <figure>
                             <img src="image/signin_image.png" alt="sing up image">

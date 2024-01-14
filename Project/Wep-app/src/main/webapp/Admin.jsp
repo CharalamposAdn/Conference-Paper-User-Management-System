@@ -16,11 +16,13 @@
             <div class="logo">
                 <img src="logo.png">
             </div>
-
+				 <!-- Navigation menu -->
             <ul>
+            	<!-- Home link with home icon -->
                 <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                <!-- About link -->
                 <li><a href="About.jsp">About</a></li>
-               
+               <!-- View dropdown with Papers and Conferences sub-menu -->
 		 		 <li><a href="#"><i class="fa fa-caret-down"></i> View <i class="fa fa-caret-down"></i></a>
 		                    <div class="sub-menu">
 		                        <ul>	 
@@ -29,7 +31,7 @@
 		                        </ul>
 		                    </div>
 		                </li>
-
+				<!-- Search dropdown with Search Papers and Search Conferences sub-menu -->
   				<li><a href="#"><i class="fa fa-caret-down"></i> Search <i class="fa fa-caret-down"></i></a>
                     <div class="sub-menu">
                         <ul>	 
@@ -38,9 +40,9 @@
                         </ul>
                     </div>
                 </li>
-                
+                 <!-- View Users link -->
 				 <li><a href="ViewUsers.jsp">View Users</a></li>	
-
+				 <!-- Logout link -->
             	 <li><a href="login.jsp">Logout</a></li>
 		
 	
@@ -57,7 +59,7 @@
         <div class="title">
             <h1>PCU Management System</h1>
         </div>
-
+		<!-- Button section with links for PAPER, CONFERENCE, and USER -->
         <div class="button">
            <a href="#" class="btn">PAPER</a>
             <a href="#" class="btn">CONFERENCE</a>

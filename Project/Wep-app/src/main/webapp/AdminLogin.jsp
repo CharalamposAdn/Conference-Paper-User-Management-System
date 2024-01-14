@@ -22,18 +22,22 @@
                 <div class="signin-content">
                     
                     <div class="signin-form">
+                    	   <!-- Form Title -->
                         <h2 class="form-title">Admin Log in</h2>
                         <form method="post" action="admin-login-process.jsp" class="register-form" id="login-form">
                             <div class="form-group">
+                             <!-- Username/Name Input -->
                                 <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="name" id="name" placeholder="Your Name" />
                             </div>
+                            <!-- Password Input -->
                             <div class="form-group">
                                 <label for="password"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="password" id="password" placeholder="Password" />
                             </div>
                             <div class="form-group form-button">
                                 <input type="hidden" name="role" value="admin">
+                                 <!-- Submit Button -->
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
                             </div>
                         </form>

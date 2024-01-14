@@ -63,11 +63,11 @@
                 <li><a href="login.jsp">Exit</a></li>
             </ul>
         </div>
-
+		<!-- Title section -->
         <div class="title">
             <h1>PCU Management System</h1>
         </div>
-
+		<!-- Button section with links for PAPER, CONFERENCE, and USER -->
         <div class="button">
             <a href="#" class="btn">PAPER</a>
             <a href="#" class="btn">CONFERENCE</a>
@@ -76,4 +76,3 @@
     </header>
 </body>
 </html>
-tml>

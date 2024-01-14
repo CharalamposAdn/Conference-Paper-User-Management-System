@@ -1,12 +1,12 @@
 package com.site;
 
-//UserValidator.java
+
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserValidator {
-
+// Method to  Validates a username.
  public static boolean isValidUsername(String username) {
      // Username must start with a letter and have at least 5 characters,
      // which can be alphanumeric or '_'.
@@ -15,7 +15,7 @@ public class UserValidator {
      Matcher matcher = pattern.matcher(username);
      return matcher.matches();
  }
-
+//Method to  Validates a password.
  public static boolean isValidPassword(String password) {
      // Password must have a size of at least 8 characters and comprise both
      // capital and lowercase letters, digits, and special characters.

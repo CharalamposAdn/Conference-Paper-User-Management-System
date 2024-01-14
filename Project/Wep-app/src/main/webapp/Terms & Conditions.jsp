@@ -4,9 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Terms & Conditions</title>
-<link rel="stylesheet" type="text/css" href="css/Terms & Conditions.css"> <!-- Updated CSS file name -->
+<link rel="stylesheet" type="text/css" href="css/Terms & Conditions.css"> >
 <style>
-    /* Additional inline styles can be added here if needed */
 </style>
 </head>
 <body>

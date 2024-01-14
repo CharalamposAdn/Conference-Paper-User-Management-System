@@ -5,6 +5,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Login Page</title>
+    <!-- JavaScript function to show error popup -->
     <script>
         function showErrorPopup(message) {
             alert(message);
@@ -13,17 +14,22 @@
     </script>
 </head>
 <body>
-
+	 <!-- Create or retrieve a JavaBean named 'login' -->
     <jsp:useBean id="login" class="com.site.User" />
+    <!-- Set properties of the 'login' bean based on request parameters -->
     <jsp:setProperty property="*" name="login" />
 
     <%
+ 		// Create an instance of the LoginDao class
         LoginDao loginDao = new LoginDao();
+    	// Retrieve the account status
         String accountStatus = loginDao.getAccountStatus(login.getName());
 		System.out.println("Account Status: " + accountStatus);
+		// Check the account status
         if ("active".equals(accountStatus)) {
+        	// Validate login credentials
             boolean status = loginDao.validate(login);
-
+	
             if (status) {
                 // Reset consecutive failures on successful login
                 loginDao.updateConsecutiveFailures(login, 2);

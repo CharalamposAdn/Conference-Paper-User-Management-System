@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 
 
 public class PasswordUpdateService {
+	 // Method to update user password
 	public static String updatePassword(String currentPassword, String newPassword, String confirmPassword,jakarta.servlet.http.HttpSession session) {
 	    String connurl = "jdbc:mysql://localhost:3306/registration";
 	    Connection con = null;
@@ -74,7 +75,7 @@ public class PasswordUpdateService {
 	    }
 	}
 
-
+	// Method to handle consecutive failures and update account status
     private static String handleConsecutiveFailures(int id, int consecutiveFailures, Connection con, String additionalStatus) {
         try {
             // Check if there are three consecutive failures

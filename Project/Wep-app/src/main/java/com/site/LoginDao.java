@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoginDao {
-
+	// Method to validate user credentials against the database
     public boolean validate(User user) throws ClassNotFoundException {
         boolean status = false;
 
@@ -35,7 +35,7 @@ public class LoginDao {
     
     
     
-
+ // Method to validate admin credentials against the database
     public boolean validateAdmin(User user) throws ClassNotFoundException {
         boolean status = false;
 
@@ -63,7 +63,7 @@ public class LoginDao {
     
     
     
-    
+ // Method to get consecutive failures count for a user
     public int getConsecutiveFailures(User user) {
         int consecutiveFailures = 0;
 
@@ -83,7 +83,7 @@ public class LoginDao {
 
         return consecutiveFailures;
     }
-
+    // Method to update consecutive failures for a user
     public void updateConsecutiveFailures(User user, int consecutiveFailures) {
         try (Connection connection = createConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("UPDATE users SET consecutive_failures = ? WHERE username = ?")) {
@@ -97,7 +97,7 @@ public class LoginDao {
             printSQLException(e);
         }
     }
-
+    // Method to deactivate a user account
     public void deactivateAccount(User user) {
         try (Connection connection = createConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("UPDATE users SET status = 'deactivated', consecutive_failures = 0 WHERE username = ?")) {
@@ -109,14 +109,14 @@ public class LoginDao {
             printSQLException(e);
         }
     }
-
+ // Method to create a database connection
     private Connection createConnection() throws SQLException {
         return DriverManager.getConnection("jdbc:mysql://localhost:3306/registration", "root", "123456789");
     }
     
     
     
-    
+    // Method to get the account status of a user
     public String getAccountStatus(String username) {
         String status = "active"; // default status
 
@@ -136,7 +136,7 @@ public class LoginDao {
         return status;
     }
 
-    
+    // Method to reset consecutive failures for a user
     public void resetConsecutiveFailures(String username) {
         try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/registration", "root", "123456789");
              PreparedStatement preparedStatement = connection.prepareStatement("UPDATE users SET consecutive_failures = 0 WHERE username = ?")) {
@@ -148,7 +148,7 @@ public class LoginDao {
         }
     }
     
-    
+ // Method to retrieve a list of all users
     public List<User> getAllUsers() {
         List<User> userList = new ArrayList<>();
 
@@ -174,7 +174,7 @@ public class LoginDao {
 
         return userList;
     }
-    
+ // Method to activate a user account
     public void activateAccount(String username) {
         try (Connection connection = createConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("UPDATE users SET status = 'active' WHERE username = ?")) {
@@ -186,7 +186,7 @@ public class LoginDao {
             printSQLException(e);
         }
     }
-
+ // Method to deactivate a user account by an admin
     public void deactivateAccountAdmin(String username) {
         try (Connection connection = createConnection();
              PreparedStatement preparedStatement = connection.prepareStatement("UPDATE users SET status = 'deactivated' WHERE username = ?")) {
@@ -200,7 +200,7 @@ public class LoginDao {
     }
 
     
-    
+    // Method to print SQL exceptions
     private void printSQLException(SQLException ex) {
         for (Throwable e : ex) {
             if (e instanceof SQLException) {
