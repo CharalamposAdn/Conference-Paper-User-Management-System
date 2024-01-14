@@ -178,16 +178,10 @@ public class ConferenceManagementService {
     }
 
     private boolean hasAccess(Conference conference, String userId) {
-        // Check if the user has access to view the conference based on role
-        // For simplicity, assuming ADMIN can access all conferences
-        // You may need to adjust this based on your specific access control logic
         return isUserAdmin(userId) || conference.getPcChairs().contains(userId) || conference.getPcMembers().contains(userId);
     }
 
     private boolean isUserAdmin(String userId) {
-        // Logic to check if the user has ADMIN role
-        // You may implement this based on your user management logic
-        // For simplicity, assuming user is ADMIN if the userId is "admin"
         return "admin".equals(userId);
     }
 
@@ -206,16 +200,10 @@ public class ConferenceManagementService {
     }
 
     private boolean hasAccessToView(Conference conference, String userId) {
-        // Logic to check if the user has access to view the conference
-        // You may implement this based on your access control logic
-        // For simplicity, assuming ADMIN can access all conferences
         return isUserAdmin(userId) || conference.getPcChairs().contains(userId) || conference.getPcMembers().contains(userId);
     }
 
     private Conference createViewableConference(Conference conference, String userId) {
-        // Logic to create a viewable conference based on user role
-        // You may customize this based on your specific requirements
-        // For simplicity, returning the same conference object for now
         return conference;
     }
 
@@ -224,9 +212,6 @@ public class ConferenceManagementService {
 
         if (conference != null) {
             if (hasPermissionToDelete(conference, userId)) {
-                // Logic to delete the conference
-                // You may want to implement additional cleanup, such as deleting associated papers
-                // For simplicity, removing the conference from the list for now
                 conferences.remove(conference);
             } else {
                 throw new AccessDeniedException("You do not have permission to delete this conference.");
@@ -237,9 +222,6 @@ public class ConferenceManagementService {
     }
 
     private boolean hasPermissionToDelete(Conference conference, String userId) {
-        // Logic to check if the user has permission to delete the conference
-        // You may implement this based on your access control logic
-        // For simplicity, assuming only PC Chairs can delete conferences
         return isUserPCChair(userId) && conference.getPcChairs().contains(userId);
     }
 
