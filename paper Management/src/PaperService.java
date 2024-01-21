@@ -61,7 +61,6 @@ public class PaperService {
         
     }
   
-    
     public void makeDecision(int paperId, PaperState decision) {
         Paper paper = getPaperById(paperId);
         if (paper != null && paper.getState() == PaperState.REVIEWED) {
