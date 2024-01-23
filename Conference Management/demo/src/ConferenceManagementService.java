@@ -47,7 +47,6 @@ public class ConferenceManagementService {
 
     private String generateConferenceId() {
         // Generate a unique conference ID (you can implement your own logic)
-        // For simplicity, using a basic counter here
         return "CONF" + (conferences.size() + 1);
     }
 
